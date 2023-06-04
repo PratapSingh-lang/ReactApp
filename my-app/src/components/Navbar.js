@@ -1,5 +1,5 @@
 import React from 'react'
-
+import PropTypes from 'prop-types'
 
 export default function Navbar(props) {
   return (
@@ -26,4 +26,18 @@ export default function Navbar(props) {
     </div>
   </nav>
   )
+}
+ /*
+ Proptypes is basically used for giving datatype of the input Strictly
+ */
+Navbar.propTypes = {
+    title : PropTypes.string.isRequired, // it means this is not an Optional parameter
+    // , not passing will throw error
+    aboutapp : PropTypes.string
+}
+
+// Defalut Props
+Navbar.defaultProps = {
+  title : 'Set title here',
+  aboutapp : 'about App here'
 }
